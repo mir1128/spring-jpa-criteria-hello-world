@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+group = 'com'
+version = '0.0.1-SNAPSHOT'
+
+description = """spring-jpa-autocreatetable"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+
+
+repositories {
+        
+     maven { url "http://repo.spring.io/libs-milestone" }
+     maven { url "http://maven.oschina.net/content/groups/public/" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.1.0.RC1'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.1.0.RC1'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.1.0.RC1'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version:'1.1.0.RC1'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.30'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.2.1'
+    compile group: 'javax.servlet', name: 'jstl', version:'1.2'
+}
